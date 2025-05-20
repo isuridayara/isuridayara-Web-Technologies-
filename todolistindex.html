@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List with Priority</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: #28a745;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e9ecef;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .priority-High { border-left: 6px solid red; }
+    .priority-Medium { border-left: 6px solid orange; }
+    .priority-Low { border-left: 6px solid green; }
+
+    .delete-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📝 To-Do List with Priority</h1>
+    
+    <div class="form">
+      <input type="text" id="taskInput" placeholder="Enter your task" />
+      <select id="prioritySelect">
+        <option value="High">High 🔴</option>
+        <option value="Medium">Medium 🟡</option>
+        <option value="Low">Low 🟢</option>
+      </select>
+      <input type="date" id="dueDate" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    let tasks = [];
+
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const prioritySelect = document.getElementById("prioritySelect");
+      const dueDateInput = document.getElementById("dueDate");
+
+      const task = {
+        title: taskInput.value.trim(),
+        priority: prioritySelect.value,
+        dueDate: dueDateInput.value
+      };
+
+      if (!task.title) {
+        alert("Please enter a task.");
+        return;
+      }
+
+      tasks.push(task);
+      renderTasks();
+
+      taskInput.value = "";
+      dueDateInput.value = "";
+    }
+
+    function renderTasks() {
+      const list = document.getElementById("taskList");
+      list.innerHTML = "";
+
+      tasks.sort((a, b) => {
+        const priorityOrder = { High: 1, Medium: 2, Low: 3 };
+        if (priorityOrder[a.priority] !== priorityOrder[b.priority]) {
+          return priorityOrder[a.priority] - priorityOrder[b.priority];
+        }
+        return new Date(a.dueDate) - new Date(b.dueDate);
+      });
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.className = `priority-${task.priority}`;
+        li.innerHTML = `
+          <span>${task.title} - ${task.priority} - Due: ${task.dueDate}</span>
+          <button class="delete-btn" onclick="deleteTask(${index})">Delete</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      renderTasks();
+    }
+  </script>
+</body>
+</html>
