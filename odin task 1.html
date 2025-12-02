@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODIN Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Norse&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafb;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .left-panel {
+            width: 35%;
+            background-image: url("C:\Users\dayar\Downloads\halie-west-25xggax4bSA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .logo-strip {
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .logo-strip h1 {
+            font-family: 'Norse', serif;
+            font-size: 8rem;
+            line-height: 0.8;
+            letter-spacing: 5px;
+        }
+
+        .image-credit {
+            color: #ccc;
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-credit a {
+            color: #eee;
+        }
+
+        .right-panel {
+            width: 65%;
+            background-color: #f9fafb;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-header, .form-body {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .form-header {
+            margin-bottom: 20px;
+            padding-top: 50px;
+        }
+        
+        .form-header p:first-child {
+            font-size: 1.3rem;
+            font-weight: 600;
+            max-width: 800px;
+        }
+
+        .form-header h2 {
+            margin-top: 10px;
+        }
+
+        .form-body {
+            background-color: white;
+            box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            margin-bottom: 40px;
+        }
+        
+        .form-body h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .input-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 20px);
+            min-width: 250px;
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #E5E7EB;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+            outline: none;
+        }
+
+        input:invalid:focus:not(:placeholder-shown) {
+            border-color: red;
+        }
+
+        .form-footer {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .create-account-button {
+            background-color: #596D48;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.2s;
+        }
+
+        .create-account-button:hover {
+            background-color: #4e5f3f;
+        }
+
+        .login-link {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .login-link a {
+            color: #596D48;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo-strip">
+                <h1>ODIN</h1>
+            </div>
+            <div class="image-credit">
+                Photo by <a href="https://unsplash.com/@haliewest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Halie West</a> on <a href="https://unsplash.com/photos/25h-V-xXoI4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            
+            <div class="form-header">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                <p>You know you want to.</p>
+            </div>
+            
+            <div class="form-body">
+                <h2>Let's do this!</h2>
+                <form action="#" method="post">
+                    <fieldset class="input-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required minlength="8" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required minlength="8" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="create-account-button">Create Account</button>
+                <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
