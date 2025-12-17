@@ -79,12 +79,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 </section>
 
 
-<section>
-<h2>6. Count Words / Characters / Spaces / Special</h2>
-<input id="s6">
-<button onclick="countAll()">Count</button>
-<p id="o6"></p>
-</section>
+
 
 
 <section>
@@ -119,11 +114,6 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o11"></p>
 </section>
 
-<section>
-<h2>12. Remove Duplicates</h2>
-<button onclick="removeDup()">Run</button>
-<p id="o12"></p>
-</section>
 
 
 <section>
@@ -161,14 +151,9 @@ SUBJECT NAME :  Advance Web Technologies</br>
 </section>
 
 
-<section>
-<h2>20. 10-digit Mobile Validation</h2>
-<input id="mobile">
-<button onclick="validateMobile()">Check</button>
-<p id="o20"></p>
-</section>
 
->
+
+
 <section>
 <h2>21. Detect Number or String</h2>
 <input id="s21">
@@ -191,32 +176,6 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <button onclick="onlyAlpha()">Check</button>
 <p id="o23"></p>
 </section>
-
-
-<section>
-<h2>24. Signup Form</h2>
-<form onsubmit="submitForm(event)">
-<input id="name" placeholder="Name" required>
-<input id="email" placeholder="Email" required>
-<button type="submit">Submit</button>
-<button type="reset">Reset</button>
-</form>
-</section>
-
-
-<section>
-<h2>25. Display Signup Data</h2>
-<p id="o25"></p>
-</section>
-
-
-<section>
-<h2>26. Email Validation</h2>
-<input id="e26">
-<button onclick="emailCheck()">Check</button>
-<p id="o26"></p>
-</section>
-
 
 <section>
 <h2>27–28. Person Object</h2>
@@ -245,16 +204,13 @@ function ext(){o2.innerText=s2.value[2]+s2.value[3]}
 function longWord(){o3.innerText=s3.value.split(' ').reduce((a,b)=>a.length>b.length?a:b)}
 function toggleCase(){o4.innerText=s4.value.split('').map(c=>c==c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')}
 function findIndex(){o5.innerText=s5.value.indexOf(sub.value)}
-function countAll(){
- let t=s6.value;
- o6.innerText=`Words:${t.split(' ').length}, Chars:${t.length}, Spaces:${(t.match(/ /g)||[]).length}, Special:${(t.match(/[^a-zA-Z0-9 ]/g)||[]).length}`;
-}
+
 function thirdFruit(){alert(["Apple","Banana","Mango"][2])}
 function lastElement(){alert(["A","B","C"].pop())}
 function tenth(){alert(s9.value[9])}
 function loopArray(){o10.innerText=["A","B","C"].join(',')}
 function mapDouble(){o11.innerText=[1,2,3].map(x=>x*2)}
-function removeDup(){o12.innerText=[1,1,2,3].filter((v,i,a)=>a.indexOf(v)==i)}
+
 function spliceDel(){let a=[1,2,3,4];a.splice(1,2);o13.innerText=a}
 function spliceAdd(){let a=[1,2,4];a.splice(2,0,3);o14.innerText=a}
 function calc(op){let a=+n1.value,b=+n2.value;o15.innerText=eval(a+op+b)}
@@ -262,12 +218,12 @@ function add(a,b){return a+b}
 function sub(a,b){return a-b}
 function mul(a,b){return a*b}
 function div(a,b){return a/b}
-function validateMobile(){o20.innerText=/^\d{10}$/.test(mobile.value)}
+
 function detect(){o21.innerText=isNaN(s21.value)?"String":"Number"}
 function onlyNum(){o22.innerText=/^\d+$/.test(s22.value)}
 function onlyAlpha(){o23.innerText=/^[a-zA-Z]+$/.test(s23.value)}
-function submitForm(e){e.preventDefault();o25.innerText=`${name.value} - ${email.value}`}
-function emailCheck(){o26.innerText=/^\S+@\S+\.\S+$/.test(e26.value)}
+
+
 function showPerson(){let p={name:"John",age:25,gender:"Male"};o28.innerText=JSON.stringify(p)}
 let t=0,int;
 function start(){int=setInterval(()=>time.innerText=++t,1000)}
