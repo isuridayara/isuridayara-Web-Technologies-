@@ -71,13 +71,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o4"></p>
 </section>
 
-<section>
-<h2>5. Find Substring Index</h2>
-<input id="s5">
-<input id="sub">
-<button onclick="findIndex()">Find</button>
-<p id="o5"></p>
-</section>
+
 
     
 <section>
@@ -220,7 +214,6 @@ function rev(){o1.innerText=s1.value.split('').reverse().join('')}
 function ext(){o2.innerText=s2.value[2]+s2.value[3]}
 function longWord(){o3.innerText=s3.value.split(' ').reduce((a,b)=>a.length>b.length?a:b)}
 function toggleCase(){o4.innerText=s4.value.split('').map(c=>c==c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')}
-function findIndex(){o5.innerText=s5.value.indexOf(sub.value)}
 function thirdFruit(){alert(["Apple","Banana","Mango"][2])}
 function lastElement(){alert(["A","B","C"].pop())}
 function tenth(){alert(s9.value[9])}
