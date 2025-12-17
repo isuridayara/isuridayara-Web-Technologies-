@@ -136,6 +136,22 @@ SUBJECT NAME :  Advance Web Technologies</br>
     }
 </script>
 
+
+function task 5(){
+ <input type="text" id="inputStr5" placeholder="Enter a string">
+<input type="text" id="subStr" placeholder="Enter substring">
+<button onclick="findIndex()">Find Index</button>
+<p id="result5"></p>
+}
+<script>
+    function findIndex() {
+        let str = document.getElementById("inputStr5").value;
+        let subStr = document.getElementById("subStr").value;
+        let index = str.indexOf(subStr);
+        document.getElementById("result5").innerText = "Index: " + index;
+    }
+</script>
+
    
 
 </p>
