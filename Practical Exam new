@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SET A –Practical Exam</title>
+<style>
+body { font-family: Arial; }
+button { margin:5px; padding:6px 12px; }
+.page { display:none; border-top:1px solid #999; padding:10px; }
+</style>
+
+<script>
+function openPage(id){
+  document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+</script>
+</head>
+
+<body>
+
+<h2>Variant A </h2>
+
+<!-- BUTTON MENU -->
+<div>
+<button onclick="openPage('p1')">1</button>
+<button onclick="openPage('p2')">2</button>
+<button onclick="openPage('p3')">3</button>
+<button onclick="openPage('p4')">4</button>
+<button onclick="openPage('p5')">5</button>
+<button onclick="openPage('p6')">6</button>
+<button onclick="openPage('p7')">7</button>
+<button onclick="openPage('p8')">8</button>
+<button onclick="openPage('p9')">9</button>
+<button onclick="openPage('p10')">10</button>
+<button onclick="openPage('p11')">11</button>
+<button onclick="openPage('p12')">12</button>
+<button onclick="openPage('p13')">13</button>
+<button onclick="openPage('p14')">14</button>
+<button onclick="openPage('p15')">15</button>
+<button onclick="openPage('p16')">16</button>
+<button onclick="openPage('p17')">17</button>
+<button onclick="openPage('p18')">18</button>
+<button onclick="openPage('p19')">19</button>
+<button onclick="openPage('p20')">20</button>
+<button onclick="openPage('p21')">21</button>
+<button onclick="openPage('p22')">22</button>
+<button onclick="openPage('p23')">23</button>
+<button onclick="openPage('p24')">24</button>
+<button onclick="openPage('p25')">25</button>
+<button onclick="openPage('p26')">26</button>
+<button onclick="openPage('p27')">27</button>
+<button onclick="openPage('p28')">28</button>
+<button onclick="openPage('p29')">29</button>
+<button onclick="openPage('p30')">30</button>
+</div>
+
+<hr>
+
+<!-- TASK PAGES -->
+
+<div id="p1" class="page">
+<h3>1. Reverse String</h3>
+<input id="r1"><button onclick="o1.innerText=r1.value.split('').reverse().join('')">Reverse</button>
+<p id="o1"></p>
+</div>
+
+<div id="p2" class="page">
+<h3>2. Extract 3rd & 4th Character</h3>
+<input id="r2"><button onclick="o2.innerText=r2.value.slice(2,4)">Extract</button>
+<p id="o2"></p>
+</div>
+
+<div id="p3" class="page">
+<h3>3. Longest Word</h3>
+<input id="r3"><button onclick="o3.innerText=r3.value.split(' ').sort((a,b)=>b.length-a.length)[0]">Find</button>
+<p id="o3"></p>
+</div>
+
+<div id="p4" class="page">
+<h3>4. Uppercase ↔ Lowercase</h3>
+<input id="r4"><button onclick="o4.innerText=r4.value==r4.value.toUpperCase()?r4.value.toLowerCase():r4.value.toUpperCase()">Convert</button>
+<p id="o4"></p>
+</div>
+
+<div id="p5" class="page">
+<h3>5. Substring Index</h3>
+<input id="r5"><input id="r5b">
+<button onclick="o5.innerText=r5.value.indexOf(r5b.value)">Find</button>
+<p id="o5"></p>
+</div>
+
+<div id="p6" class="page">
+<h3>6. Count Words</h3>
+<input id="r6"><button onclick="o6.innerText=r6.value.split(' ').length">Count</button>
+<p id="o6"></p>
+</div>
+
+<div id="p7" class="page">
+<h3>7. Array Third Element</h3>
+<button onclick="o7.innerText=['Apple','Banana','Mango'][2]">Show</button>
+<p id="o7"></p>
+</div>
+
+<div id="p8" class="page">
+<h3>8. Last Array Element (Popup)</h3>
+<button onclick="alert(['A','B','C'].pop())">Show</button>
+</div>
+
+<div id="p9" class="page">
+<h3>9. 10th Character</h3>
+<button onclick="alert(prompt('Enter string')[9])">Check</button>
+</div>
+
+<div id="p10" class="page">
+<h3>10. Array Loop</h3>
+<button onclick="o10.innerText=[1,2,3,4].join(', ')">Display</button>
+<p id="o10"></p>
+</div>
+
+<div id="p11" class="page">
+<h3>11. Map Double</h3>
+<button onclick="o11.innerText=[1,2,3].map(x=>x*2)">Double</button>
+<p id="o11"></p>
+</div>
+
+<div id="p12" class="page">
+<h3>12. Remove Duplicates</h3>
+<button onclick="o12.innerText=[...new Set([1,2,2,3])]">Remove</button>
+<p id="o12"></p>
+</div>
+
+<div id="p13" class="page">
+<h3>13. Splice Delete</h3>
+<button onclick="let a=[1,2,3];a.splice(1,1);o13.innerText=a">Delete</button>
+<p id="o13"></p>
+</div>
+
+<div id="p14" class="page">
+<h3>14. Splice Insert</h3>
+<button onclick="let a=[1,3];a.splice(1,0,2);o14.innerText=a">Insert</button>
+<p id="o14"></p>
+</div>
+
+<div id="p15" class="page">
+<h3>15. Calculator</h3>
+<input id="a"><input id="b">
+<button onclick="o15.innerText=+a.value + +b.value">+</button>
+<button onclick="o15.innerText=a.value - b.value">-</button>
+<button onclick="o15.innerText=a.value * b.value">*</button>
+<button onclick="o15.innerText=a.value / b.value">/</button>
+<p id="o15"></p>
+</div>
+
+<div id="p16" class="page"><h3>16. Add</h3><button onclick="alert(2+3)">Add</button></div>
+<div id="p17" class="page"><h3>17. Subtract</h3><button onclick="alert(5-2)">Subtract</button></div>
+<div id="p18" class="page"><h3>18. Multiply</h3><button onclick="alert(3*3)">Multiply</button></div>
+<div id="p19" class="page"><h3>19. Divide</h3><button onclick="alert(10/2)">Divide</button></div>
+
+<div id="p20" class="page">
+<h3>20. 10-digit Mobile Validation</h3>
+<input id="m"><button onclick="alert(/^\d{10}$/.test(m.value))">Check</button>
+</div>
+
+<div id="p21" class="page">
+<h3>21. Detect Number/String</h3>
+<input id="d"><button onclick="alert(isNaN(d.value)?'String':'Number')">Detect</button>
+</div>
+
+<div id="p22" class="page">
+<h3>22. Only Numbers</h3>
+<input id="n"><button onclick="alert(/^\d+$/.test(n.value))">Check</button>
+</div>
+
+<div id="p23" class="page">
+<h3>23. Only Alphabets</h3>
+<input id="al"><button onclick="alert(/^[A-Za-z]+$/.test(al.value))">Check</button>
+</div>
+
+<div id="p24" class="page">
+<h3>24. Signup Form</h3>
+<input id="u" placeholder="Name">
+<button onclick="localStorage.setItem('user',u.value)">Submit</button>
+</div>
+
+<div id="p25" class="page">
+<h3>25. Display Signup</h3>
+<button onclick="alert(localStorage.getItem('user'))">Show</button>
+</div>
+
+<div id="p26" class="page">
+<h3>26. Email Validation</h3>
+<input id="e"><button onclick="alert(/^\S+@\S+\.\S+$/.test(e.value))">Check</button>
+</div>
+
+<div id="p27" class="page">
+<h3>27. Person Object</h3>
+<button onclick="p={name:'Alex',age:20,gender:'M'};alert(p.name)">Create</button>
+</div>
+
+<div id="p28" class="page">
+<h3>28. Display Person</h3>
+<button onclick="alert(JSON.stringify({name:'Alex',age:20,gender:'M'}))">Display</button>
+</div>
+
+<div id="p29" class="page">
+<h3>29. Stopwatch</h3>
+<p id="sw">0</p>
+<button onclick="t=setInterval(()=>sw.innerText=++sw.innerText,1000)">Start</button>
+<button onclick="clearInterval(t)">Stop</button>
+</div>
+
+<div id="p30" class="page">
+<h3>30. Background Color</h3>
+<button onclick="document.body.style.backgroundColor='lightgreen'">Change</button>
+</div>
+
+</body>
+</html>
