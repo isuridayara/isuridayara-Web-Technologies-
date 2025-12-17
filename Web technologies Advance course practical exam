@@ -4,14 +4,14 @@
 <title> Web Technologies </title>
 </head>
 <body>
-<h1>Web Technologies Practical Exam </h1>
+<h1>Advance Web Technologies Practical Exam </h1>
 <p>
 
 STUDENT NAME : Isuri Dayara Indrarthna Isuri Dayara Indrarthna Don Manuwelge Dona </br>
 CURRENT DATE :  13.06.2025</br>
-SUBJECT NAME :  Web Technologies</br>
+SUBJECT NAME :  Advance Web Technologies</br>
 </br>
-INFORMATION ABOUT ME :  I am Isuri Dayara Indrarathna Don Manuwelge Dona.I am 6th Semester student at ISMA University. I study Information Systems in Riga Nordic University.
+
  
 
   <title>JavaScript Tasks</title>
@@ -52,16 +52,36 @@ INFORMATION ABOUT ME :  I am Isuri Dayara Indrarathna Don Manuwelge Dona.I am 6t
   <h2> Task Buttons</h2>
 
 
-  <button onclick="task1()">Task 1: String Manipulation</button>
-  <button onclick="task2()">Task 2: Signup Form</button>
-  <button onclick="task3()">Task 3: Person Object</button>
-  <button onclick="task4()">Task 4: Countdown Timer</button>
-  <button onclick="task5()">Task 5: Math Operation</button>
-  <button onclick="task6()">Task 6: Array Management</button>
-  <button onclick="task7()">Task 7: Double Array</button>
-  <button onclick="task8()">Task 8: 10th Character</button>
-  <button onclick="task9()">Task 9: Last Array Element</button>
-  <button onclick="task10()">Task 10: Splice Example</button>
+  <button onclick="task1()">Task 1: String Reverse</button>
+  <button onclick="task2()">Task 2: Exact 3rd and 4th characters from the string</button>
+  <button onclick="task3()">Task 3: Uppercase to Lowercase</button>
+  <button onclick="task4()">Task 4: Find index of the subtring in the string</button>
+  <button onclick="task5()">Task 5: Count words,characters,spaces and special symbols in the a string</button>
+  <button onclick="task6()">Task 6: Array of Fruits and show third element</button>
+  <button onclick="task7()">Task 7: Last element from the Array</button>
+  <button onclick="task8()">Task 8: 10th Character from input</button>
+  <button onclick="task9()">Task 9: Work with Js and store and display values</button>
+  <button onclick="task10()">Task 10: Apply map() to double each element of Array</button>
+ <button onclick="task11()">Task 11: Apply map() Remove duplicates from an array</button>
+ <button onclick="task12()">Task 12: Apply map() use split to delete elements</button>
+ <button onclick="task13()">Task 13: Apply map() use split to insert elements</button>
+ <button onclick="task14()">Task 14: Apply map() Function : Addition by my choice</button>
+ <button onclick="task15()">Task 15: Apply map() Adding two numbers</button>
+ <button onclick="task16()">Task 16: Apply map() Substract two numbers</button>
+ <button onclick="task17()">Task 17: Apply map()Devide two numbers</button>
+ <button onclick="task18()">Task 18: Apply map()Multiply two numbers</button>
+ <button onclick="task19()">Task 19: Apply map() Allow only 10-digit mobile input</button>
+ <button onclick="task20()">Task 20: Apply map() Accept two inputs and detect numeric or string case</button>
+ <button onclick="task21()">Task 21: Apply map()Validate: check input and if input contains only numbers</button>
+ <button onclick="task22()">Task 22: Apply map() Validate: check input and if input contains only alphabets</button>
+ <button onclick="task23()">Task 23: Apply map() create signup form(submit+reset)</button>
+ <button onclick="task24()">Task 24: Apply map() Display submitted signup data in webpage</button>
+ <button onclick="task25()">Task 25: Apply map() Validate form email format basic</button>
+ <button onclick="task26()">Task 26: Apply map()Create Person Object</button>
+ <button onclick="task27()">Task 27: Apply map()Display person values on a web page</button>
+ <button onclick="task28()">Task 28: Apply map()Stopwatch</button>
+ <button onclick="task29()">Task 29: Apply map() to double each element of Array</button>
+ <button onclick="task30()">Task 30: Apply map() Change Background color</button>
 
   <script>
     function task1() {
@@ -72,139 +92,51 @@ INFORMATION ABOUT ME :  I am Isuri Dayara Indrarathna Don Manuwelge Dona.I am 6t
     }
 
     function task2() {
-      let name = prompt("Enter your name:");
-      alert(`You entered: ${name}`);
+     <input type="text" id="inputStr2" placeholder="Enter a string">
+<button onclick="extractChars()">Extract 3rd and 4th</button>
+<p id="result2"></p>
+
+<script>
+    function extractChars() {
+        let str = document.getElementById("inputStr2").value;
+        let chars = str.charAt(2) + str.charAt(3);
+        document.getElementById("result2").innerText = "3rd and 4th Characters: " + chars;
+    }
+</script>
+
     }
 
     function task3() {
-      let person = { name: "Alice", age: 25, gender: "Female" };
-      alert(`Name: ${person.name}\nAge: ${person.age}\nGender: ${person.gender}`);
+     <input type="text" id="inputStr3" placeholder="Enter a sentence">
+<button onclick="findLongestWord()">Find Longest Word</button>
+<p id="result3"></p>
+
+<script>
+    function findLongestWord() {
+        let str = document.getElementById("inputStr3").value;
+        let words = str.split(" ");
+        let longestWord = words.reduce((a, b) => a.length > b.length ? a : b);
+        document.getElementById("result3").innerText = "Longest Word: " + longestWord;
     }
+</script>
 
-    let timer;
-    let seconds = 0;
-
-    function task4() {
-      const action = prompt("Choose action: start, pause, reset");
-      if (action === "start") {
-        timer = setInterval(() => console.log("Time: " + (++seconds)), 1000);
-        alert("Timer started (check console)");
-      } else if (action === "pause") {
-        clearInterval(timer);
-        alert("Timer paused");
-      } else if (action === "reset") {
-        clearInterval(timer);
-        seconds = 0;
-        alert("Timer reset");
-      } else {
-        alert("Invalid action");
-      }
     }
+ function task4() 
+<input type="text" id="inputStr4" placeholder="Enter a string">
+<button onclick="convertCase()">Convert Case</button>
+<p id="result4"></p>
 
-    function task5() {
-      let a = parseFloat(prompt("Enter first number:"));
-      let b = parseFloat(prompt("Enter second number:"));
-      let op = prompt("Enter operation (add, subtract, multiply, divide):");
-      let result;
-      switch(op) {
-        case "add": result = a + b; break;
-        case "subtract": result = a - b; break;
-        case "multiply": result = a * b; break;
-        case "divide": result = b !== 0 ? a / b : "Cannot divide by zero"; break;
-        default: result = "Invalid operation";
-      }
-      alert(`Result: ${result}`);
+<script>
+    function convertCase() {
+        let str = document.getElementById("inputStr4").value;
+        let converted = str.split('').map(char => 
+            char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
+        ).join('');
+        document.getElementById("result4").innerText = "Converted Case: " + converted;
     }
+</script>
 
-    function task6() {
-      let fruits = ["apple", "banana", "mango"];
-      fruits.push("grape");
-      fruits.pop();
-      alert("Updated array: " + fruits.join(", "));
-    }
-
-    function task7() {
-      let nums = prompt("Enter numbers separated by comma:");
-      if (!nums) return;
-      let arr = nums.split(',').map(Number);
-      let doubled = arr.map(n => n * 2);
-      alert("Doubled: " + doubled.join(", "));
-    }
-
-    function task8() {
-      let input = prompt("Enter a string:");
-      alert("10th character: " + (input[9] || "Not available"));
-    }
-
-    function task9() {
-      let arr = prompt("Enter array values separated by comma:");
-      if (!arr) return;
-      let splitArr = arr.split(',');
-      alert("Last element: " + splitArr[splitArr.length - 1]);
-    }
-
-    function task10() {
-      let items = ["a", "b", "c", "d"];
-      items.splice(2, 1, "z");
-      alert("Modified array: " + items.join(", "));
-    }
-  </script>
-
-
- </br>
- 
-Mini project Title : To-Do List with priority
-Information :A working to-do list that allows:</br>
-             <ul><li>Adding tasks with priority</li></br>
-             <li>Optional due dates</li></br>
-             <li>Deleting tasks</li><br>
-             <li>Tasks are sorted by priority and date</li></ul></br>
-  
-Prepare a concise presentation covering the following points: </br>
-</br>
-1)	Problem Statement: Describe the problem your project addresses. </br>
-</br>
-<ul><li>A simple task management app where users can add, edit, delete, and mark tasks as completed.</ul></li></br>
-</br>
-2)	Objective: Explain the purpose of your project. </br>
-
-<ul><li>Allow users to create and manage tasks</li>
-<li>Categorize tasks by priority: High, Medium, Low</li>
-<li>Improve time management using due dates</li>
-<li>Simple, clean user interface using HTML, CSS, and JavaScript</li></ul>
-
-3)	Goal: Define the end goals and intended outcomes of your project. </br>
-
-<ul><li>Add task with title, priority, and due date</li>
-<li>Tasks sorted by priority</li>
-<li>Delete tasks</li>
-<li>Simple and responsive design</li>
-<li>Works offline (no Firebase, no login)</li></ul>
-
-
-4)	Technology Used: List the tools, languages, or frameworks you used. </br>
-<ul><li>HTML  Structure of the webpage</li>
-<li>CSS  Styling and layout</li>
-<li>JavaScript  Logic and interactivity</li>
-<li>Visual Studio Code  Code editor</li>
-<li>Live Server Local testing</li></ul>
-
-5)	User Audience: Identify the target audience or users of your project. </br>
-<ul><li>This simple To-Do list is for people who use Offline and online To-do list tasks.This is a simple and accurate to prioratize ,add and delete the To-do List.</li></ul></br>
-
-6)	Impact on Society: Discuss how your project could benefit society or people in general.</br>
-<ul><li>This simple TO-Do list helps anyone without age limit to create simple daily TO-Do list.</ul></li></br>
-</br>
-SCREENSHOTS</br>
-</br>
-7)	Result/Output: Outline the expected or actual results. </br>
- <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image1.png" alt="Front Page of TO-Do List" width="500" height="300">
- </br>
- <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image2.png" alt="Front Page of TO-Do List" width="500" height="300">
- </br>
- <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image3.png" alt="Front Page of TO-Do List" width="500" height="300">
- </br>
- 
+   
 
 </p>
 </body>
