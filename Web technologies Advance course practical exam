@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Web Technologies </title>
+</head>
+<body>
+<h1>Web Technologies Practical Exam </h1>
+<p>
+
+STUDENT NAME : Isuri Dayara Indrarthna Isuri Dayara Indrarthna Don Manuwelge Dona </br>
+CURRENT DATE :  13.06.2025</br>
+SUBJECT NAME :  Web Technologies</br>
+</br>
+INFORMATION ABOUT ME :  I am Isuri Dayara Indrarathna Don Manuwelge Dona.I am 6th Semester student at ISMA University. I study Information Systems in Riga Nordic University.
+ 
+
+  <title>JavaScript Tasks</title>
+  <style>
+    body { background-color:#FFC300; font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px; font-size: 14px; }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body
+  </style>
+</head>
+
+  <h2> Task Buttons</h2>
+
+
+  <button onclick="task1()">Task 1: String Manipulation</button>
+  <button onclick="task2()">Task 2: Signup Form</button>
+  <button onclick="task3()">Task 3: Person Object</button>
+  <button onclick="task4()">Task 4: Countdown Timer</button>
+  <button onclick="task5()">Task 5: Math Operation</button>
+  <button onclick="task6()">Task 6: Array Management</button>
+  <button onclick="task7()">Task 7: Double Array</button>
+  <button onclick="task8()">Task 8: 10th Character</button>
+  <button onclick="task9()">Task 9: Last Array Element</button>
+  <button onclick="task10()">Task 10: Splice Example</button>
+
+  <script>
+    function task1() {
+      let input = prompt("Enter a string:");
+      if (!input) return;
+      let reversed = input.split('').reverse().join('');
+      alert(`Reversed: ${reversed}\n3rd Char: ${input[2] || ''}\n4th Char: ${input[3] || ''}`);
+    }
+
+    function task2() {
+      let name = prompt("Enter your name:");
+      alert(`You entered: ${name}`);
+    }
+
+    function task3() {
+      let person = { name: "Alice", age: 25, gender: "Female" };
+      alert(`Name: ${person.name}\nAge: ${person.age}\nGender: ${person.gender}`);
+    }
+
+    let timer;
+    let seconds = 0;
+
+    function task4() {
+      const action = prompt("Choose action: start, pause, reset");
+      if (action === "start") {
+        timer = setInterval(() => console.log("Time: " + (++seconds)), 1000);
+        alert("Timer started (check console)");
+      } else if (action === "pause") {
+        clearInterval(timer);
+        alert("Timer paused");
+      } else if (action === "reset") {
+        clearInterval(timer);
+        seconds = 0;
+        alert("Timer reset");
+      } else {
+        alert("Invalid action");
+      }
+    }
+
+    function task5() {
+      let a = parseFloat(prompt("Enter first number:"));
+      let b = parseFloat(prompt("Enter second number:"));
+      let op = prompt("Enter operation (add, subtract, multiply, divide):");
+      let result;
+      switch(op) {
+        case "add": result = a + b; break;
+        case "subtract": result = a - b; break;
+        case "multiply": result = a * b; break;
+        case "divide": result = b !== 0 ? a / b : "Cannot divide by zero"; break;
+        default: result = "Invalid operation";
+      }
+      alert(`Result: ${result}`);
+    }
+
+    function task6() {
+      let fruits = ["apple", "banana", "mango"];
+      fruits.push("grape");
+      fruits.pop();
+      alert("Updated array: " + fruits.join(", "));
+    }
+
+    function task7() {
+      let nums = prompt("Enter numbers separated by comma:");
+      if (!nums) return;
+      let arr = nums.split(',').map(Number);
+      let doubled = arr.map(n => n * 2);
+      alert("Doubled: " + doubled.join(", "));
+    }
+
+    function task8() {
+      let input = prompt("Enter a string:");
+      alert("10th character: " + (input[9] || "Not available"));
+    }
+
+    function task9() {
+      let arr = prompt("Enter array values separated by comma:");
+      if (!arr) return;
+      let splitArr = arr.split(',');
+      alert("Last element: " + splitArr[splitArr.length - 1]);
+    }
+
+    function task10() {
+      let items = ["a", "b", "c", "d"];
+      items.splice(2, 1, "z");
+      alert("Modified array: " + items.join(", "));
+    }
+  </script>
+
+
+ </br>
+ 
+Mini project Title : To-Do List with priority
+Information :A working to-do list that allows:</br>
+             <ul><li>Adding tasks with priority</li></br>
+             <li>Optional due dates</li></br>
+             <li>Deleting tasks</li><br>
+             <li>Tasks are sorted by priority and date</li></ul></br>
+  
+Prepare a concise presentation covering the following points: </br>
+</br>
+1)	Problem Statement: Describe the problem your project addresses. </br>
+</br>
+<ul><li>A simple task management app where users can add, edit, delete, and mark tasks as completed.</ul></li></br>
+</br>
+2)	Objective: Explain the purpose of your project. </br>
+
+<ul><li>Allow users to create and manage tasks</li>
+<li>Categorize tasks by priority: High, Medium, Low</li>
+<li>Improve time management using due dates</li>
+<li>Simple, clean user interface using HTML, CSS, and JavaScript</li></ul>
+
+3)	Goal: Define the end goals and intended outcomes of your project. </br>
+
+<ul><li>Add task with title, priority, and due date</li>
+<li>Tasks sorted by priority</li>
+<li>Delete tasks</li>
+<li>Simple and responsive design</li>
+<li>Works offline (no Firebase, no login)</li></ul>
+
+
+4)	Technology Used: List the tools, languages, or frameworks you used. </br>
+<ul><li>HTML  Structure of the webpage</li>
+<li>CSS  Styling and layout</li>
+<li>JavaScript  Logic and interactivity</li>
+<li>Visual Studio Code  Code editor</li>
+<li>Live Server Local testing</li></ul>
+
+5)	User Audience: Identify the target audience or users of your project. </br>
+<ul><li>This simple To-Do list is for people who use Offline and online To-do list tasks.This is a simple and accurate to prioratize ,add and delete the To-do List.</li></ul></br>
+
+6)	Impact on Society: Discuss how your project could benefit society or people in general.</br>
+<ul><li>This simple TO-Do list helps anyone without age limit to create simple daily TO-Do list.</ul></li></br>
+</br>
+SCREENSHOTS</br>
+</br>
+7)	Result/Output: Outline the expected or actual results. </br>
+ <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image1.png" alt="Front Page of TO-Do List" width="500" height="300">
+ </br>
+ <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image2.png" alt="Front Page of TO-Do List" width="500" height="300">
+ </br>
+ <img src="https://assets.onecompiler.app/43mmnfqmv/43mmp953e/image3.png" alt="Front Page of TO-Do List" width="500" height="300">
+ </br>
+ 
+
+</p>
+</body>
+</html>
+
+
