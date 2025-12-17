@@ -39,7 +39,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 
 <h1>SET A – JavaScript Programs (All in One)</h1>
 
-< 1 >
+
 <section>
 <h2>1. Reverse a String</h2>
 <input id="s1">
@@ -47,7 +47,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o1"></p>
 </section>
 
-< 2 >
+
 <section>
 <h2>2. Extract 3rd & 4th Character</h2>
 <input id="s2">
@@ -55,7 +55,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o2"></p>
 </section>
 
-<!-- 3 -->
+
 <section>
 <h2>3. Longest Word</h2>
 <input id="s3">
@@ -63,7 +63,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o3"></p>
 </section>
 
-<!-- 4 -->
+
 <section>
 <h2>4. Toggle Case</h2>
 <input id="s4">
@@ -71,7 +71,6 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o4"></p>
 </section>
 
-<!-- 5 -->
 <section>
 <h2>5. Find Substring Index</h2>
 <input id="s5">
@@ -80,69 +79,61 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o5"></p>
 </section>
 
-<!-- 6 -->
-<section>
-<h2>6. Count Words / Characters / Spaces / Special</h2>
-<input id="s6">
-<button onclick="countAll()">Count</button>
-<p id="o6"></p>
-</section>
-
-<!-- 7 -->
+    
 <section>
 <h2>7. Array – Third Element</h2>
 <button onclick="thirdFruit()">Show</button>
 </section>
 
-<!-- 8 -->
+    
 <section>
 <h2>8. Last Element (Popup)</h2>
 <button onclick="lastElement()">Show</button>
 </section>
 
-<!-- 9 -->
+
 <section>
 <h2>9. 10th Character</h2>
 <input id="s9">
 <button onclick="tenth()">Find</button>
 </section>
 
-<!-- 10 -->
-<section>
+
+
 <h2>10. Display Array using Loop</h2>
 <button onclick="loopArray()">Display</button>
 <p id="o10"></p>
 </section>
 
-<!-- 11 -->
+
 <section>
 <h2>11. Map – Double Elements</h2>
 <button onclick="mapDouble()">Run</button>
 <p id="o11"></p>
 </section>
 
-<!-- 12 -->
+
 <section>
 <h2>12. Remove Duplicates</h2>
 <button onclick="removeDup()">Run</button>
 <p id="o12"></p>
 </section>
 
-<!-- 13 -->
+
 <section>
 <h2>13. Splice – Delete</h2>
 <button onclick="spliceDel()">Delete</button>
 <p id="o13"></p>
 </section>
 
-<!-- 14 -->
+
 <section>
 <h2>14. Splice – Insert</h2>
 <button onclick="spliceAdd()">Insert</button>
 <p id="o14"></p>
 </section>
 
-<!-- 15 -->
+
 <section>
 <h2>15. Calculator</h2>
 <input id="n1" type="number">
@@ -154,7 +145,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o15"></p>
 </section>
 
-<!-- 16–19 -->
+
 <section>
 <h2>16–19. Functions</h2>
 <button onclick="alert(add(5,3))">Add</button>
@@ -163,7 +154,6 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <button onclick="alert(div(6,3))">Div</button>
 </section>
 
-<!-- 20 -->
 <section>
 <h2>20. 10-digit Mobile Validation</h2>
 <input id="mobile">
@@ -171,7 +161,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o20"></p>
 </section>
 
-<!-- 21 -->
+
 <section>
 <h2>21. Detect Number or String</h2>
 <input id="s21">
@@ -179,7 +169,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o21"></p>
 </section>
 
-<!-- 22 -->
+
 <section>
 <h2>22. Only Numbers</h2>
 <input id="s22">
@@ -187,7 +177,7 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o22"></p>
 </section>
 
-<!-- 23 -->
+
 <section>
 <h2>23. Only Alphabets</h2>
 <input id="s23">
@@ -195,7 +185,6 @@ SUBJECT NAME :  Advance Web Technologies</br>
 <p id="o23"></p>
 </section>
 
-<!-- 24 -->
 <section>
 <h2>24. Signup Form</h2>
 <form onsubmit="submitForm(event)">
@@ -206,37 +195,21 @@ SUBJECT NAME :  Advance Web Technologies</br>
 </form>
 </section>
 
-<!-- 25 -->
+
 <section>
 <h2>25. Display Signup Data</h2>
 <p id="o25"></p>
 </section>
 
-<!-- 26 -->
-<section>
-<h2>26. Email Validation</h2>
-<input id="e26">
-<button onclick="emailCheck()">Check</button>
-<p id="o26"></p>
-</section>
 
-<!-- 27–28 -->
+
 <section>
 <h2>27–28. Person Object</h2>
 <button onclick="showPerson()">Show</button>
 <p id="o28"></p>
 </section>
 
-<!-- 29 -->
-<section>
-<h2>29. Stopwatch</h2>
-<button onclick="start()">Start</button>
-<button onclick="stop()">Stop</button>
-<button onclick="reset()">Reset</button>
-<p id="time">0</p>
-</section>
 
-<!-- 30 -->
 <section>
 <h2>30. Button Background Change</h2>
 <button onclick="changeBg()">Change Color</button>
@@ -248,10 +221,6 @@ function ext(){o2.innerText=s2.value[2]+s2.value[3]}
 function longWord(){o3.innerText=s3.value.split(' ').reduce((a,b)=>a.length>b.length?a:b)}
 function toggleCase(){o4.innerText=s4.value.split('').map(c=>c==c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')}
 function findIndex(){o5.innerText=s5.value.indexOf(sub.value)}
-function countAll(){
- let t=s6.value;
- o6.innerText=`Words:${t.split(' ').length}, Chars:${t.length}, Spaces:${(t.match(/ /g)||[]).length}, Special:${(t.match(/[^a-zA-Z0-9 ]/g)||[]).length}`;
-}
 function thirdFruit(){alert(["Apple","Banana","Mango"][2])}
 function lastElement(){alert(["A","B","C"].pop())}
 function tenth(){alert(s9.value[9])}
@@ -270,12 +239,8 @@ function detect(){o21.innerText=isNaN(s21.value)?"String":"Number"}
 function onlyNum(){o22.innerText=/^\d+$/.test(s22.value)}
 function onlyAlpha(){o23.innerText=/^[a-zA-Z]+$/.test(s23.value)}
 function submitForm(e){e.preventDefault();o25.innerText=`${name.value} - ${email.value}`}
-function emailCheck(){o26.innerText=/^\S+@\S+\.\S+$/.test(e26.value)}
 function showPerson(){let p={name:"John",age:25,gender:"Male"};o28.innerText=JSON.stringify(p)}
 let t=0,int;
-function start(){int=setInterval(()=>time.innerText=++t,1000)}
-function stop(){clearInterval(int)}
-function reset(){t=0;time.innerText=0}
 function changeBg(){document.body.style.background="lightblue"}
 </script>
 
